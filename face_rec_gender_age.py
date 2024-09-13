@@ -95,7 +95,7 @@ def ageModel():
 	
 	age_model = Model(inputs=model.input, outputs=base_model_output)
 	
-	#you can find the pre-trained weights for age prediction here: https://drive.google.com/file/d/1YCox_4kJ-BYeXq27uUbasu--yz28zUMV/view?usp=sharing
+	#you can find the pre-trained weights for age prediction here: https://github.com/serengil/deepface_models/releases
 	age_model.load_weights("models/age_model_weights.h5")
 	
 	return age_model
@@ -110,7 +110,7 @@ def genderModel():
 
 	gender_model = Model(inputs=model.input, outputs=base_model_output)
 	
-	#you can find the pre-trained weights for gender prediction here: https://drive.google.com/file/d/1wUXRVlbsni2FN9-jkS_f4UTUrm1bRLyk/view?usp=sharing
+	#you can find the pre-trained weights for gender prediction here: https://github.com/serengil/deepface_models/releases
 	gender_model.load_weights("models/gender_model_weights.h5")
 	
 	return gender_model
@@ -187,7 +187,6 @@ while(True):
 			margin = 30
 			margin_x = int((w * margin)/100)
 			margin_y = int((h * margin)/100)
-			print(y - margin_y)
 			if y - margin_y >= 0:
 					
 				detected_face = img[int(y-margin_y):int(y+h+margin_y), int(x-margin_x):int(x+w+margin_x)]
